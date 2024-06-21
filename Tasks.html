@@ -1,0 +1,85 @@
+<!doctype html>
+<link rel="stylesheet" href="progressv3.css">
+<head><title>ProgressPromise</title>
+    <link rel="icon" href="https://i.ibb.co/hCdKn2F/th.jpg"></head>
+<h1 id="hea1+">Tasks</h1>
+<h2 id="gol1"class="gol1"></h2>
+<h2 id="gol2"class="gol2"></h2>
+<h2 id="gol3"class="gol3"></h2>
+<h2 id="gol4"class="gol4"></h2>
+<script>let gls=0
+localStorage.setItem("gls",gls)
+let gr1=""
+    let gr2=""
+    let gr3=""
+    let gr4=""
+</script> 
+<script>function register(main,second){
+    
+    console.log(main)
+    console.log(second)
+    
+    localStorage.getItem("gls")
+    gls=gls+1
+    localStorage.setItem("gls",gls)
+    console.log(gls)
+    if(document.getElementById('user1').value=="RESETGLS"){
+        gls=0
+        localStorage.setItem("gls",gls)
+        console.log(gls)
+        document.getElementById('user1').value=""
+        document.getElementById("hea1+").textContent=((name.concat("'s Tasks")).concat(" GL#")).concat(gls)
+    }
+    if(gls==1 || gls==2 || gls==3 || gls==4){
+       document.getElementById("gol".concat(gls)).textContent=main
+       document.getElementById('user1').value=""
+       document.getElementById("hea1+").textContent=((name.concat("'s Tasks")).concat(" GL#")).concat(gls)
+    }
+   localStorage.setItem("til1",document.getElementById("gol1").textContent)
+   console.log(gol1)
+   localStorage.setItem("til2",document.getElementById("gol2").textContent)
+   localStorage.setItem("til3",document.getElementById("gol3").textContent)
+   localStorage.setItem("til4",document.getElementById("gol4").textContent)
+   
+
+}
+</script>
+<script>
+const name= localStorage.getItem("name")
+console.log(name)
+document.getElementById("hea1+").textContent=name.concat("'s Tasks")
+gr1=localStorage.getItem("til1")
+gr2=localStorage.getItem("til2")
+gr3=localStorage.getItem("til3")
+gr4=localStorage.getItem("til4")
+console.log(gr1)</script>
+<script>function restore(){
+    document.getElementById('gol1').innerHTML=gr1
+    console.log(gr1)
+    document.getElementById('gol2').innerHTML=gr2
+    document.getElementById('gol3').innerHTML=gr3
+    document.getElementById('gol4').innerHTML=gr4
+}</script>
+<a class="buttontype" href="Menu.html"><button  class="button1">Menu</button></a>
+<form> <input class="value" type="value"id="user1"placeholder="Enter your Tasks(submit 'RESETGLS' to go back to Tasks spot #1)">
+    
+    
+<input id="clickMe" class="value2" type="button" value="Press to add Tasks"   onclick="register(document.getElementById('user1').value,document.getElementById('user1').value)">
+<input id="clickMe" class="value22" type="button" value="click to restore"   onclick="restore()">
+<input id="clickMe23" class="value23" type="button" value="" onclick="clickMe23.addEventListener('click', function onClick() {
+    clickMe23.style.backgroundColor = 'green';
+    
+  });" >
+  <input id="clickMe24" class="value24" type="button" value="" onclick="clickMe24.addEventListener('click', function onClick() {
+    clickMe24.style.backgroundColor = 'green';
+    
+  });" >
+  <input id="clickMe25" class="value25" type="button" value="" onclick="clickMe25.addEventListener('click', function onClick() {
+    clickMe25.style.backgroundColor = 'green';
+    
+  });" >
+
+<input id="clickMe26" class="value26" type="button" value="" onclick="clickMe26.addEventListener('click', function onClick() {
+    clickMe26.style.backgroundColor = 'green';
+    
+  });" >
