@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head><title>ProgressPromise</title>
+<link rel="icon" href="https://i.ibb.co/hCdKn2F/th.jpg"></head>
+<link rel="stylesheet" href="Progress.css">
+<h1 id="hea1">Login To ProgressPromise (Your Task Tracker) </h1><br>
+<!--<a class="buttontype" href="pg2.html"><button  class="button1">Menu</button></a>-->
+<script>function register(main,second){
+    console.log(main)
+    console.log(second)
+    document.getElementById("hea1").textContent="Welcome to ProgressPromise, ".concat(main)
+    document.getElementById("user1").value=""
+    document.getElementById("user2").value=""
+    window.location.href = 'pg2.html';
+    localStorage.setItem('name', main);
+    localStorage.setItem('logs',second)
+
+   
+}href="pg2.html"
+</script>
+<form> <input class="value" type="value"id="user1"placeholder="Enter your Username">
+    <input class="value1" type="value"id="user2"placeholder="Enter your PRGPRM save logs in plain text form(If you dont have any, leave this field blank)">
+
+<input id="clickMe" class="value2" type="button" value="Press to submit"   onclick="register(document.getElementById('user1').value,document.getElementById('user2').value)">
+</form>
